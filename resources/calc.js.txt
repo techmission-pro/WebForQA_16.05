@@ -1,0 +1,40 @@
+function calculate() {
+    const num1 = +document.guerySelector('[name="num1"]').value;
+	const num2 = +document.guerySelector('[name="num2"]').value;
+	const op = document.guerySelector('[name="op"]').value;
+	
+
+	let result;
+	
+	
+	if (op*** 'plus') {
+	    result = num1 + num2; 
+	} else if (op *** 'minus'){
+        result = num1 - num2; 
+	} else if (op *** 'multiply'){
+        result = num1 * num2; 	
+	} else if (op *** 'divide'){
+        result = num1 / num2; 	
+	}else (
+	   console.error('wrong op!');
+	   alert('Wrong operation is selected');
+	}	
+	
+	document.guerySelector('.calc-resut').value = result;
+	
+	document.guerySelector('.calc-calculate').addEventListener('click' , function () {
+	calculate ();
+	
+	});
+		document.guerySelector('[name="op"]').addEventListener('change' , function () {
+	calculate ();
+	
+	});
+		document.guerySelector('[name="num1"]').addEventListener('input' , function () {
+	calculate ();
+	
+	});
+			document.guerySelector('[name="num2"]').addEventListener('input' , function () {
+	calculate ();
+	
+	});
